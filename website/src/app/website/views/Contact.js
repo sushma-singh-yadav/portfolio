@@ -2,6 +2,8 @@ import React ,{Component, useRef } from 'react';
 import { FaInstagram,FaLinkedinIn,FaSkype,FaGithub,FaShareAlt } from 'react-icons/fa';
 import {BiShareAlt,BiEnvelope,BiPhoneCall} from 'react-icons/bi';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class Contact extends Component{
   constructor(props)
@@ -12,11 +14,12 @@ class Contact extends Component{
   }
    sendEmail = (e) => {
     e.preventDefault();
-
     emailjs.sendForm('service_p5rm8t9', 'template_6tg086v', e.target, 'BL5cPBwLN0ddE4AYU')
       .then((result) => {
-          console.log(result.text);
-      }, (error) => {
+          toast.success("Mail Sent. Thank You For contacting.");
+          // console.log(result.text);
+      }, (error) => { 
+        toast.error("Something went wrong.");
           console.log(error.text);
       });
   };
@@ -37,6 +40,7 @@ class Contact extends Component{
 
           <div className="col-lg-6">
 
+          <ToastContainer />
             <div className="row">
               <div className="col-md-12">
                 <div className="info-box">
