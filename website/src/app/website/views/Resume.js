@@ -130,10 +130,10 @@ class Resume extends Component{
             <div className="resume-item">
               <h4>Software Engineer</h4>
               <h5>Jan 2023 - Present</h5>
-              <p><em>Popreach Corporation</em></p>
+              <p><em>Garden City Games</em></p>
               <p>
               <ul>
-                <li>Developed pet feature in garden of time game.</li>
+                <li>Developed pet feature, Reimplemented Subscription Plan.</li>
                 <li>Worked on PHP, CodeIgniter and MySQL.</li>
               </ul>
               </p>
